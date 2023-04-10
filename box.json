@@ -1,0 +1,16 @@
+{
+  "files-bin": [
+    ".env.local.php",
+    "autoload_runtime.template",
+    "vendor/humbug/php-scoper/vendor-hotfix/.gitkeep"
+  ],
+  "directories": [
+    "config",
+    "public",
+    "var"
+  ],
+  "force-autodiscovery": true,
+  "check-requirements": false,
+  "exclude-composer-files": false,
+  "main": "bin/console"
+}

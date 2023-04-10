@@ -1,0 +1,95 @@
+{
+  "name": "it-bens/box-test",
+  "description": "",
+  "type": "package",
+  "license": "",
+  "authors": [
+    {
+      "name": "Martin Bens",
+      "email": "martin.bens@it-bens.de"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "ext-bcmath": "*",
+    "ext-intl": "*",
+    "ext-mbstring": "*",
+    "doctrine/annotations": "2.0.*",
+    "doctrine/doctrine-bundle": "2.8.*",
+    "doctrine/orm": "2.14.*",
+    "league/csv": "9.9.*",
+    "moneyphp/money": "4.1.*",
+    "symfony/config": "6.2.*",
+    "symfony/console": "6.2.*",
+    "symfony/dependency-injection": "6.2.*",
+    "symfony/dotenv": "6.2.*",
+    "symfony/flex": "2.2.*",
+    "symfony/framework-bundle": "6.2.*",
+    "symfony/process": "6.2.*",
+    "symfony/requirements-checker": "2.0.*",
+    "symfony/runtime": "6.2.*",
+    "symfony/uid": "6.2.*",
+    "symfony/yaml": "6.2.*"
+  },
+  "require-dev": {
+    "doctrine/doctrine-migrations-bundle": "^3.2",
+    "humbug/box": "^4.3",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-doctrine": "^1.3",
+    "phpstan/phpstan-symfony": "^1.2",
+    "squizlabs/php_codesniffer": "^3.7",
+    "symfony/maker-bundle": "^1.48",
+    "symfony/stopwatch": "^6.2"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": false,
+      "symfony/flex": true,
+      "symfony/runtime": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "ITB\\BoxTest\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ITB\\BoxTest\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "bin-dir": "bin",
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    },
+    "runtime": {
+      "autoload_template": "autoload_runtime.template"
+    },
+    "symfony": {
+      "allow-contrib": false,
+      "require": "6.2.*"
+    }
+  },
+  "scripts": {
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install %PUBLIC_DIR%": "symfony-cmd",
+      "requirements-checker": "script"
+    },
+    "post-autoload-dump": [
+      "@auto-scripts"
+    ]
+  }
+}

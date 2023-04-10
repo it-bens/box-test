@@ -1,0 +1,19 @@
+###> JetBrains ###
+/.idea
+###< JetBrains ###
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
+
+###> symfony/framework-bundle ###
+/config/secrets/prod/prod.decrypt.private.php
+/public/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> doctrine/doctrine-migrations-bundle ###
+/migrations/
+###< doctrine/doctrine-migrations-bundle ###
